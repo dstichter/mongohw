@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <form class="" action="/submit" method="post">
+        <input type="text" name="comment" value=""></input>
+        <input type="hidden" name='id' value={{data._id}}>
+        <button type="submit" name="button">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      {{data.title}}
+    </div>
+    <div class="col-md-3">
+      {{#each data.comments}}
+        <ul>{{comment}}</ul>
+      {{/each}}
+      <button id='delete' name="button">Delete Last Comment</button>
+    </div>
+  </div>
+
+</div>
